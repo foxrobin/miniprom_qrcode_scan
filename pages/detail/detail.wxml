@@ -1,0 +1,67 @@
+<!-- pages/detail/detail.wxml -->
+<van-row>
+  <van-col span="24">
+    <image class="productTitle" src="{{productInfo.brandLogo}}" mode="aspectFit"></image>
+  </van-col>
+</van-row>
+<van-row>
+  <van-col span="17">
+    <!-- <image class="image-product-header-left" wx:if="true" src="{{productInfo.images[0]}}" mode="aspectFit"></image> -->
+    <swiper class="home-swiper image-product-header-left" mode="aspectFit" indicator-dots="true" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for-items="{{productInfo.images}}" wx:key="index">
+        <swiper-item>
+          <image class="image-product-header-left" src="{{item}}" mode="aspectFit" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </van-col>
+  <van-col custom-class="col-product-header-trustme" span="7">
+    <van-row>
+      <image class="image-product-header-right" src="{{trustLogo}}" mode="aspectFill" />
+    </van-row>
+    <van-row custom-class="row-status-message">
+      <text class="text-status-message">{{productInfo.statusMessage}}</text>
+    </van-row>
+  </van-col>
+</van-row>
+<van-row class="col-product-name">
+  <text>{{language.productInfo}}</text>
+</van-row>
+<!-- Product Info -->
+<block wx:if="{{hasFullPremission}}">
+  <van-row wx:for="{{productInfo.details}}" wx:key="index" custom-class="detailrow">
+    <block>
+      <van-col span="12" custom-class="colset coltitle">{{index}}</van-col>
+    </block>
+    <van-col span="12" custom-class="colset">
+      <rich-text>{{item}}</rich-text>
+    </van-col>
+  </van-row>
+  <view class="largeButton">
+    <!-- <van-button wx:if="{{hasFullPremission}}" size="large" bindtap="moreInfo">
+      {{language.btnMoreInfo}}
+    </van-button>
+    <van-button wx:else size="large" bindtap="btnLogin2_Click">{{language.btnLogin2}}</van-button> -->
+    <van-button size="large" bindtap="moreInfo">{{language.btnMoreInfo}}</van-button>
+  </view>
+  <view class="largeButton">
+    <van-button size="large" type="primary" bindtap="backhome">
+      {{language.btnScanAnother}}
+    </van-button>
+  </view>
+</block>
+<!-- Login button -->
+<block wx:else>
+  <van-button size="large" open-type="getUserInfo" bindgetuserinfo="btnLogin2_Click">
+    {{language.btnLogin1}}
+  </van-button>
+</block>
+<!-- <block wx:else>
+  <van-row>
+    <van-col custom-class="block-center" span="24">
+      <van-button type="primary" open-type="getUserInfo" bindgetuserinfo="btnLogin2_Click">
+        {{language.btnLogin2}}
+      </van-button>
+    </van-col>
+  </van-row>
+</block> -->

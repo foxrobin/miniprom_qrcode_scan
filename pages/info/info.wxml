@@ -1,0 +1,6 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+
+</view> -->
+<!-- <web-view src="https://www.trustmechain.com"></web-view>  -->
+<web-view src="{{url}}"></web-view> 

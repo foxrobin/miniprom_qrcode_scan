@@ -1,0 +1,76 @@
+<!-- index.wxml -->
+<view class="viewBackground">
+  <image class="image-topright" src="../../image/imgRT.png" mode="scaleToFill"></image>
+  <image class="image-topleft" src="../../image/imgLT.png" mode="scaleToFill"></image>
+  <image class="image-bottomright" src="../../image/imgRB.png" mode="scaleToFill"></image>
+</view>
+<view wx:if="{{isshowalert}}" class="notice">
+  <block>
+    <van-row offset="2" class="notice_header">
+      <van-col class='notice_content'>
+        <image class="notice-image" src="http://kclub-api-prod.azurewebsites.net/images/notice_icon.png"></image>
+        <text class="body_text notice_txt">{{descp}}</text>
+      </van-col>
+    </van-row>
+  </block>
+</view>
+<view class="backgroud-float">
+  <block>
+    <van-row offset="2" class="namecard_header">
+      <van-col>
+        <image class="agent-image" src="{{images}}"></image>
+      </van-col>
+            <van-col>
+        <image  class="add-icon" src="http://kclub-api-prod.azurewebsites.net/images/add_contact.png" bindtap="addContact"></image>
+      </van-col>
+    </van-row>
+    <van-row offset="2" class="namecard_body">
+      <van-col class='info'>
+        <text class="body_text company_txt">{{company}}</text>
+        <text class="body_text company_txt">{{companyHant}}</text>
+
+        <text class="body_text body_name">{{name}}</text>
+        <text class="body_text body_name">{{nameHant}}</text>
+
+        <text class="body_text body_txt">{{position}}</text>
+        <text class="body_text body_txt">{{positionHant}}</text>
+
+        <text class="body_text body_txt">{{department}}</text>
+        <text class="body_text body_txt">{{departmentHant}}</text>
+      </van-col>
+      <van-col class='contact'>
+        <!-- <text class="body_text contact_txt">M : +852 {{mobile}}</text> -->
+        <text class="body_text contact_txt">+852 {{tel}}</text>
+        <text class="body_text contact_txt">{{email}}</text>
+        <text class="body_text contact_txt">\n</text>
+        <text class="body_text address_txt">{{address}}</text>
+        <text class="body_text address_txt">{{addressHant}}</text>
+
+      </van-col>
+      <van-col class='footer'>
+        <image class="footer-image" src="https://kclub-api-prod.azurewebsites.net/images/konew_fintech_logo.png"></image>
+      </van-col>
+    </van-row>
+  </block>
+</view>
+<view class="backgroud-float2">
+  <block>
+    <van-row offset="2" class="info_header">
+      <van-col class='contact'>
+        <text class="body_text info_header_heading stat_txt">最後查詢時間地點</text>
+        <text class="body_text info_header_txt stat_txt">{{lastcalledlocation}}</text>
+        <text class="body_text info_header_txt stat_txt">{{lastcalledtime}}</text>
+        <text class="body_text info_header_txt stat_txt">查詢次數：{{totalscantimes}}</text>
+      </van-col>
+    </van-row>
+  </block>
+</view>
+<!-- <view class="button_bottom">
+<button class="btn" hover-class='btn_hover' bindtap="addContact"> {{buttonText}} </button>
+  <van-row>
+    <van-col class='space'>
+      <text>\n</text>
+    </van-col>
+  </van-row>
+</view> -->
+

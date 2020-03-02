@@ -1,0 +1,27 @@
+/* pages/listDetail/listDetail.wxss */
+
+.colset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.coltitle {
+  background-color: #a8c951;
+  border-right: 1px solid;
+}
+
+.detailrow {
+  border-top: 0.5px solid #afafae;
+  border-bottom: 0.2px solid #afafae;
+  line-height: 50rpx;
+  color: #76a00b;
+  font-size: small;
+}
+
+.mapIcon {
+  width: 40rpx;
+  height: 40rpx;
+}

@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/infoDetail/infoDetail",
+    "pages/listDetail/listDetail",
+    "pages/listDetail2/listDetail2",
+    "pages/listDetailFull/listDetailFull",
+    "pages/brand/brand",
+    "pages/info/info",
+    "pages/agent/agent"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Konew",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#b7d332",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Scan",
+        "iconPath": "./image/ic1.png",
+        "selectedIconPath": "./image/ic1_s.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "Info",
+        "iconPath": "./image/ic3.png",
+        "selectedIconPath": "./image/ic3_s.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序將獲取你當前所在位置信息"
+    }
+  }
+}

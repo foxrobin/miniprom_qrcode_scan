@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1644930 */
+  src: url('//at.alicdn.com/t/font_1644930_yvqlm31ur2.eot');
+  src: url('//at.alicdn.com/t/font_1644930_yvqlm31ur2.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1644930_yvqlm31ur2.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1644930_yvqlm31ur2.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1644930_yvqlm31ur2.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1644930_yvqlm31ur2.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 25px;
+  font-style: normal;
+  color: rgb(17, 82, 160);
+  margin-left: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  justify-content:center;
+}
+
+.icon-icon-test:before {
+  content: "\e643";
+}
+
+.icon-icon-test1:before {
+  content: "\e64b";
+}
+
+.icon-icon-test2:before {
+  content: "\e64f";
+}
+
+.icon-infopersonal:before {
+  content: "\e6de";
+}
+
+.icon-custom:before {
+  content: "\e6e7";
+}
+
+.icon-donework:before {
+  content: "\e6e9";
+}

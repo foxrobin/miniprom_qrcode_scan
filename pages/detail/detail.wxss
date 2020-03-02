@@ -1,0 +1,85 @@
+/* pages/detail/detail.wxss */
+
+.block-center {
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+}
+
+.col-product-name {
+  color: rgb(61, 129, 55);
+  font-size: small;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.image-product-header-left {
+  height: 370rpx;
+  width: 100%;
+}
+
+.image-product-header-right {
+  max-height: 360rpx;
+  width: 100%;
+}
+
+.titleview {
+  padding: 50rpx 0;
+}
+
+.colset {
+  /* display: flex;
+  align-items: center;*/
+  justify-content: center;
+  text-align: left;
+  border-left: 0.5px solid #afafae;
+  background-color: #fff;
+}
+
+.coltitle {
+  background-color: #a8c951;
+  align-self: stretch;
+}
+
+.detailrow {
+  border-top: 0.5px solid #afafae;
+  border-bottom: 0.2px solid #afafae;
+  line-height: 50rpx;
+  color: #76a00b;
+  background-color: #a8c951;
+  font-size: small;
+}
+
+.largeButton {
+  margin: 5px;
+}
+
+.home-swiper {
+  width: 95%;
+  height: 460rpx;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.productTitle {
+  max-height: 150rpx;
+  width: 100%;
+}
+
+.row-status-message {
+  background: #dceaba;
+}
+
+.text-status-message {
+  color: rgb(61, 129, 55);
+  font-size: small;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}

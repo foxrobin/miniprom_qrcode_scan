@@ -1,0 +1,16 @@
+<!-- pages/brand/brand.wxml -->
+<view class="viewBackground">
+  <image class="image-topright" src="../../image/imgRT.png" mode="scaleToFill"></image>
+  <image class="image-topleft" src="../../image/imgLT.png" mode="scaleToFill"></image>
+  <image class="image-bottomright" src="../../image/imgRB.png" mode="scaleToFill"></image>
+</view>
+<view class="viewLogo">
+  <!-- <image class="image-tmlogo" src="../../image/tmlogo.png"></image> -->
+  <image class="image-tmlogo" src="../../image/kclub_logo_icon.png" mode="aspectFit"></image>
+
+</view>
+<view>
+  <block wx:for="{{brandList}}" wx:for-index="idx0" wx:for-item="item0" wx:key="id">
+    <van-card custom-class="card" desc="{{item0.description}}" title="{{item0.name}}" thumb="{{item0.logo}}" />
+  </block>
+</view>

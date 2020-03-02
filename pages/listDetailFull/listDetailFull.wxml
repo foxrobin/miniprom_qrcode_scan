@@ -1,0 +1,16 @@
+<!--pages/listDetailFull/listDetailFull.wxml-->
+<van-cell-group wx:for="{{listDataView}}" wx:for-index="idx0" wx:for-item="item0" wx:key="index">
+  <van-row>
+    <van-col span="24" custom-class="colset coltitle detailrow">
+    </van-col>
+  </van-row>
+  <van-row>
+    <block wx:for="{{item0}}" wx:for-index="idx1" wx:for-item="item1" wx:key="index">
+      <!-- Don't show location for now -->
+      <van-cell wx:if="{{idx1 == 'name'}}" icon="info-o" value="{{item1}}" data-queryString="{{item0.location}}" clickable bind:click="mapDetail">
+        <image class="mapIcon" slot="right-icon" src="../../image/location.png"></image>
+      </van-cell>
+      <van-cell wx:elif="{{idx1 != 'location'}}" icon="clock" value="{{item1}}" />
+    </block>
+  </van-row>
+</van-cell-group>

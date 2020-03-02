@@ -1,0 +1,53 @@
+<!-- index.wxml -->
+<view class="viewBackground">
+  <image class="image-topright" src="../../image/imgRT.png" mode="scaleToFill"></image>
+
+  <image class="image-bottomright" src="https://kclub-api-prod.azurewebsites.net/images/bottom_pattern.png" mode="scaleToFill"></image>
+</view>
+<view class="content-full">
+  <van-row>
+    <van-col class='header_col'>
+      <image class='header_img' src="https://kclub-api-prod.azurewebsites.net/images/home_header_white.png" ></image>
+    </van-col>
+  </van-row>
+
+
+  <!-- <van-row>
+    <van-col class="textinhome" offset="9">
+      <text>\n</text>
+    </van-col>
+  </van-row> -->
+  <block wx:if="{{hasUserInfo && canIUse}}">
+    <van-row>
+      <van-col style='text-align:center' offset="0" span="22">
+        <image bindtap="startScan" class="scan_btn" src="https://kclub-api-prod.azurewebsites.net/images/scan_button.png" mode="aspectFit"></image>
+      </van-col>
+    </van-row>
+  </block>
+  <block wx:if="{{!hasUserInfo && canIUse}}">
+    <van-row>
+    <van-col class="textinhome" offset="9">
+      <text>\n\n\n\n\n</text>
+    </van-col>
+  </van-row>
+    <van-row>
+      <!-- <van-col offset="7"> -->
+      <van-col offset="10">
+        <van-button class='login_btn' type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> {{language.login}} </van-button>
+      </van-col>
+    </van-row>
+  </block>
+  <block wx:else>
+    <van-row>
+      <van-col offset="9">
+        <image bindtap="avatar_click" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      </van-col>
+      <van-col style='text-align:center' offset="0" span="22">
+        <image bindtap="startScan" class="scan_icon" src="https://kclub-api-prod.azurewebsites.net/images/scan_icon.png" mode="aspectFit"></image>
+      </van-col>
+
+    </van-row>
+
+    
+  </block>
+</view>
