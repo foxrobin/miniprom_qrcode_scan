@@ -33,7 +33,7 @@
     <van-row>
       <!-- <van-col offset="7"> -->
       <van-col offset="10">
-        <van-button class='login_btn' type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> {{language.login}} </van-button>
+        <van-button class='login_btn' type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> {{loginBtnText}} </van-button>
       </van-col>
     </van-row>
   </block>
